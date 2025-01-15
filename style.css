@@ -1,8 +1,6 @@
 /* Reset General */
 body {
   background: azure;
-  font-family: miFuente;
-  font-size: 100%;
 }
 
 /* Estilos google para el input */
@@ -11,31 +9,29 @@ body {
   margin-left: 20px;
   display: grid;
   width: 200px;
-  padding: 5px 0px;
-  font-size: 1em;
+  font-size: 1.1em;
   grid-template-areas: "input";
-
   > * {
     grid-area: input;
   }
-
 }
 
 .label__span {
   transform-origin: left;
   transition: transform 0.5s color 0.5s;
-  padding: 8px 0 0 0px;
-  font-size: 0.98em;
+  font-size: 0.9em;
   color: #7b7f83;
+  margin-top: 10px;
+  height: 100%;
 }
 
 .label__input {
-  height: 100%;
   border: none;
   outline: none;
   border-bottom: 2px solid #054a8f;
   background: azure;
-  font-size: 0.9em;
+  font-size: 0.8em;
+
 }
 
 .label__input:focus + .label__span,
@@ -44,4 +40,29 @@ body {
   color: #2b6fb3;
   font-weight: 500;
   transform: translate(0, -100%) scale(1);
+}
+
+/* Responsive Mobile */
+@media (max-width: 600px) {
+  body {
+    display: flex;
+    justify-content: left;
+    padding-top: 40px;
+  }
+
+  .label {
+    width: 150px;
+  }
+
+  .label__span {
+    font-size: 1.2em;
+    margin-top: 15px;
+  }
+
+  .label__input {
+    border-radius: 0;
+    font-size: 1.1em;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
 }
